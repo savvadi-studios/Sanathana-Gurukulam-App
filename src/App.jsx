@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/common/Navbar';
 import BottomNavigation from './components/common/BottomNavigation';
@@ -51,7 +51,7 @@ function MainLayout({ children }) {
 export default function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <MainLayout>
           <Routes>
@@ -69,7 +69,7 @@ export default function App() {
             <Route path="*" element={<HomePage />} />
           </Routes>
         </MainLayout>
-      </BrowserRouter>
+      </HashRouter>
     </LanguageProvider>
   );
 }
