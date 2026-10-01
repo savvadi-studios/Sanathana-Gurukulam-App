@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+:root {
+  --primary-maroon: #5A1E0E;
+  --deep-brown: #3E170B;
+  --warm-brown: #7A3518;
+  --antique-gold: #C99232;
+  --light-gold: #E8B85C;
+  --cream: #F8EACD;
+  --warm-ivory: #FFF8E8;
+  --soft-beige: #EBD7B3;
+}
+
+body {
+  background-color: #FBF6EE;
+  color: #2E120A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-gurukulam-heading {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+}
+
+.telugu-text {
+  font-family: 'Noto Sans Telugu', sans-serif;
+}
+
+/* Parchment paper effect */
+.parchment-texture {
+  background: linear-gradient(135deg, #FDF4E3 0%, #F5E5C9 50%, #EBD5AF 100%);
+  border: 1px solid #D6B98D;
+  box-shadow: inset 0 0 40px rgba(184, 134, 11, 0.08), 0 4px 20px rgba(62, 23, 11, 0.06);
+}
+
+/* Subtle traditional gold shimmer */
+.gold-shimmer {
+  background: linear-gradient(90deg, #C99232 0%, #F4D38B 50%, #C99232 100%);
+}
