@@ -38,10 +38,13 @@ function MainLayout({ children }) {
   return (
     <div className="min-h-screen flex flex-col bg-[#FBF6EE] text-[#2E120A] selection:bg-[#EBD7B3] selection:text-[#5A1E0E]">
       <Navbar />
-      <main className="flex-1 w-full pb-16 lg:pb-0">
+      <main className="flex-1 w-full pb-14 md:pb-0">
         {children}
       </main>
-      <Footer />
+      {/* Footer is visible on desktop, hidden on mobile so mobile view matches reference screen directly */}
+      <div className="hidden md:block">
+        <Footer />
+      </div>
       {/* Mobile Bottom Navigation Bar (recreating the 7 tabs from uploaded screenshot) */}
       <BottomNavigation />
     </div>

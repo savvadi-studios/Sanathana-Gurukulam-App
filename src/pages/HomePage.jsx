@@ -12,17 +12,22 @@ import NewsletterSection from '../components/home/NewsletterSection';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full pb-4 md:pb-8">
+      {/* Sections 1 to 6: Exactly matching the uploaded mobile screenshot */}
       <HeroSection />
       <LearningPathSection />
       <CategoryScroll />
       <LiveClassesSection />
       <PopularCoursesSection />
       <QuickAccessSection />
-      <FeaturedTeachersSection />
-      <TestimonialsSection />
-      <UpcomingEventsSection />
-      <NewsletterSection />
+
+      {/* Desktop-only extended sections (hidden on mobile to match the exact mobile screen reference) */}
+      <div className="hidden md:block">
+        <FeaturedTeachersSection />
+        <TestimonialsSection />
+        <UpcomingEventsSection />
+        <NewsletterSection />
+      </div>
     </div>
   );
 }
